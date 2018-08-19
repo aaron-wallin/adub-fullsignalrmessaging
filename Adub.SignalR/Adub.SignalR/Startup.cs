@@ -23,7 +23,7 @@ namespace Adub.SignalR
             {
                 builder.AllowAnyHeader()
                         .AllowAnyMethod()
-                        .WithOrigins("https://adub-signalr-client.apps.pcf.sandbox.cudirect.com")
+                        .WithOrigins("https://adub-signalr-webclient.apps.pcf.nonprod.cudirect.com")
                         .AllowCredentials();
             }));
 
@@ -54,7 +54,7 @@ namespace Adub.SignalR
             {
                 builder.AllowAnyHeader()
                         .AllowAnyMethod()
-                        .WithOrigins("https://adub-signalr-client.apps.pcf.sandbox.cudirect.com")
+                        .WithOrigins("https://adub-signalr-webclient.apps.pcf.nonprod.cudirect.com")
                         .AllowCredentials();
             });
 

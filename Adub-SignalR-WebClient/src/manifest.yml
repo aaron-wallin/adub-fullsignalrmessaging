@@ -1,0 +1,8 @@
+---
+applications:
+- name: adub-signalr-webclient
+  buildpack: staticfile_buildpack
+  memory: 256M
+  instances: 1
+  routes:
+  - route: https://adub-signalr-webclient.apps.pcf.nonprod.cudirect.com
