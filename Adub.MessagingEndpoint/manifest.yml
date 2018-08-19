@@ -1,0 +1,11 @@
+---
+applications:
+- name: adub-masstransit-endpoint
+  buildpack: dotnet_core_buildpack
+  health-check-type: process
+  memory: 512M
+  instances: 1
+  no-route: true
+  services:
+  - masstransit-poc
+  
