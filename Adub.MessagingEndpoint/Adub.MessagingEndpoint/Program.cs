@@ -1,4 +1,5 @@
 ﻿using Adub.MessagingContracts;
+using Adub.MessagingContracts.Commands;
 using Adub.MessagingEndpoint.IoC;
 using Adub.MessagingEndpoint.MessageBus;
 using System;
@@ -14,8 +15,11 @@ namespace Adub.MessagingEndpoint
 
             do
             {
-                bus.Publish(new SampleMessage { Text = $"Hi {DateTime.Now.ToShortDateString()} {DateTime.Now.ToLongTimeString()}" });
-                Thread.Sleep(30000);
+                bus.Send<ISampleCommand>(new ISampleCommand() 
+                {
+                    CommandMessage = $"Hi {DateTime.Now.ToShortDateString()} {DateTime.Now.ToLongTimeString()}"
+                });
+                Thread.Sleep(10000);
             } while (true);
         }
     }

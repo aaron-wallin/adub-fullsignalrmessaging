@@ -8,6 +8,7 @@ namespace Adub.MessagingEndpoint.MessageBus
         IBusControl ServiceBus { get; set; }
 
         Task Publish<T>(T message) where T : class;
+        Task Send<T>(object message) where T : class;
         ITransitBus Start();
     }
 }
